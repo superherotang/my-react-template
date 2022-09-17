@@ -10,6 +10,9 @@ module.exports = {
     clean: true, // webpack4需要配置clean-webpack-plugin来删除dist文件,webpack5内置了
     publicPath: "/", // 打包后文件的公共前缀路径
   },
+  cache: {
+    type: "filesystem", // 使用文件缓存
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../public/index.html"), // 模板取定义root节点的模板
@@ -19,13 +22,13 @@ module.exports = {
   module: {
     rules: [
       {
+        include: [path.resolve(__dirname, "../src")], //只对项目src文件的ts,tsx进行loader解析
         test: /.(ts|tsx)$/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: ["thread-loader", "babel-loader"],
       },
       {
-        test: /.css$/, //匹配 css 文件
+        test: /.css$/, //匹配所有的 css 文件
+        include: [path.resolve(__dirname, "../src")],
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
@@ -68,5 +71,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".tsx", ".ts"],
+    alias: {
+      "@": path.join(__dirname, "../src"),
+    },
+    modules: [path.resolve(__dirname, "../node_modules")],
   },
 };

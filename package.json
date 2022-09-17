@@ -20,6 +20,11 @@
       "npm run eslint"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/plugin-proposal-decorators": "^7.19.1",
@@ -42,6 +47,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.1.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.23.1",
     "eslint-plugin-react": "^7.31.8",
     "glob-all": "^3.3.0",

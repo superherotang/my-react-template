@@ -19,7 +19,8 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/ban-types': 'off'
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-var-requires': 0
   },
   settings: {
     react: {

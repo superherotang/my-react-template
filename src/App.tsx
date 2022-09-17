@@ -1,20 +1,26 @@
-import React, { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 
 // prefetch
-const PreFetchDemo = lazy(() => import(
-  /* webpackChunkName: "PreFetchDemo" */
-  /*webpackPrefetch: true*/
-  '@/components/PreFetchDemo'
-))
+const PreFetchDemo = lazy(
+  () =>
+    import(
+      /* webpackChunkName: "PreFetchDemo" */
+      /*webpackPrefetch: true*/
+      '@/components/PreFetchDemo'
+    )
+)
 // preload
-const PreloadDemo = lazy(() => import(
-  /* webpackChunkName: "PreloadDemo" */
-  /*webpackPreload: true*/
-  '@/components/PreloadDemo'
- ))
+const PreloadDemo = lazy(
+  () =>
+    import(
+      /* webpackChunkName: "PreloadDemo" */
+      /*webpackPreload: true*/
+      '@/components/PreloadDemo'
+    )
+)
 
 function App() {
-  const [ show, setShow ] = useState(false)
+  const [show, setShow] = useState(false)
 
   const onClick = () => {
     setShow(true)
@@ -23,12 +29,16 @@ function App() {
     <>
       <h2 onClick={onClick}>展示</h2>
       {/* show为true时加载组件 */}
-      { show && (
+      {show && (
         <>
-          <Suspense fallback={null}><PreloadDemo /></Suspense>
-          <Suspense fallback={null}><PreFetchDemo /></Suspense>
+          <Suspense fallback={null}>
+            <PreloadDemo />
+          </Suspense>
+          <Suspense fallback={null}>
+            <PreFetchDemo />
+          </Suspense>
         </>
-      ) }
+      )}
     </>
   )
 }

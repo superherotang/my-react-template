@@ -2,11 +2,13 @@ h2 {
   color: red;
   transform: translateY(100px);
 }
+
 .smallImg {
   width: 69px;
   height: 75px;
   background: url("./assets/imgs/5kb.png") no-repeat;
 }
+
 .bigImg {
   width: 232px;
   height: 154px;

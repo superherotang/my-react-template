@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from 'react'
+import TailwinDemo from './components/TailwinDemo'
 
 // prefetch
 const PreFetchDemo = lazy(
@@ -27,6 +28,7 @@ function App() {
   }
   return (
     <>
+      <TailwinDemo />
       <h2 onClick={onClick}>展示</h2>
       {/* show为true时加载组件 */}
       {show && (

@@ -8,27 +8,37 @@
 
 为基础搭建的 react 模板
 
-
 # my-react-template
 
 - **template of:** webpack5.x + react + TypeScript + ESLint + Prettier + lint-staged + Jest + Testing Library + Husky
 - **tailwindcss:** v3.x
 
+## Create the project
+
+```bash
+npx degit superherotang/my-react-template my-app
+```
+
 ## Started
+
 ```bash
 npm install
 # or `yarn`
 ```
 
 ---
+
 ## Develop
+
 ```bash
 npm run dev
 # or `yarn dev`
 ```
 
 ---
+
 ## Build
+
 ```bash
 npm run build
 # or `yarn build`

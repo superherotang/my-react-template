@@ -1,7 +1,7 @@
 {
   "name": "my-react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "my react template",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server -c build/webpack.dev.js",
@@ -14,8 +14,8 @@
     "test": "jest --coverage"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "ALECTANG",
+  "license": "MIT",
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "npm run eslint"

@@ -66,6 +66,7 @@
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
     "postcss-loader": "^7.0.1",
+    "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "purgecss-webpack-plugin": "^5.0.0",
     "react-refresh": "^0.14.0",

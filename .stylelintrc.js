@@ -6,7 +6,7 @@ module.exports = {
     'comment-empty-line-before': [
       'always',
       {
-        ignore: ['tailwind', 'stylelint-commands', 'after-comment']
+        ignore: ['stylelint-commands', 'after-comment']
       }
     ],
     indentation: [2],

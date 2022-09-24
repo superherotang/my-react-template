@@ -4,7 +4,7 @@
 
 和
 
-[ESLint + Prettier + husky + lint-staged 规范统一前端代码风格](https://juejin.cn/post/6925378374466551821)
+[配置 React+ts 项目完整的代码及样式格式和 git 提交规范](https://juejin.cn/post/7101596844181962788)
 
 为基础搭建的 react 模板
 
@@ -42,4 +42,10 @@ npm run dev
 ```bash
 npm run build
 # or `yarn build`
+```
+
+## git 提交规范
+
+```bash
+git cz
 ```

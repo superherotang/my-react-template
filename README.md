@@ -44,6 +44,8 @@ npm run build
 # or `yarn build`
 ```
 
+---
+
 ## git 提交规范
 
 ```bash

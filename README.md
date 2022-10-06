@@ -17,6 +17,7 @@
 
 ```bash
 npx degit superherotang/my-react-template my-app
+npm i commitizen -g
 ```
 
 ## Started
